@@ -272,16 +272,12 @@ The health score (0-100) is automatically calculated based on:
 - Identify high-risk projects
 - View missing check-ins
 
-**Login:** `admin@projectpulse.com` / `admin123`
-
 ### EMPLOYEE
 - View assigned projects
 - Submit weekly check-ins (one per week per project)
 - Create and manage risks
 - View own check-ins and risks
 - Track project health
-
-**Login:** `employee1@projectpulse.com` to `employee10@projectpulse.com` / `employee123`
 
 ### CLIENT
 - View assigned projects
@@ -290,8 +286,6 @@ The health score (0-100) is automatically calculated based on:
 - Flag issues
 - View project health status
 
-**Login:** `client1@projectpulse.com` to `client15@projectpulse.com` / `client123`
-
 ## 🚢 Deployment
 
 ### Frontend (Vercel)
@@ -299,7 +293,7 @@ The health score (0-100) is automatically calculated based on:
 2. Set environment variable: `NEXT_PUBLIC_API_URL`
 3. Deploy
 
-### Backend (Render/Railway)
+### Backend (Vercel)
 1. Connect GitHub repository
 2. Set environment variables:
    - `MONGODB_URI`
