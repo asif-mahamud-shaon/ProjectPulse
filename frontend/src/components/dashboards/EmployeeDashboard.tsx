@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants, cubicBezier } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../lib/api';
-import { Plus, AlertTriangle, CheckCircle, Clock, Briefcase, Target } from 'lucide-react';
+import { Plus, AlertTriangle, CheckCircle, Clock, Briefcase, Target, TrendingUp } from 'lucide-react';
 
 interface Project {
   _id: string;
@@ -174,8 +174,9 @@ export default function EmployeeDashboard() {
   }
 
   return (
+    <>
     <div className="min-h-screen bg-gray-50 p-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">Employee Dashboard</h1>
         {/* Stats Cards */}
         <motion.div
           variants={containerVariants}
@@ -632,5 +633,6 @@ export default function EmployeeDashboard() {
           </motion.div>
         )}
       </AnimatePresence>
+    </>
   );
 }
