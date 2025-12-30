@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const User = require('../models/User');
 const Project = require('../models/Project');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://asif_mahamud_shaon:asif_mahamud_shaon200@cluster0.bdborqr.mongodb.net/projectpulse?appName=Cluster0';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://asif_mahamud_shaon:asif_mahamud_shaon200@cluster0.bdborqr.mongodb.net/ProjectPulse?appName=Cluster0';
 
 // Function to generate employee email from name
 // Example: "John Doe" -> "j.doe@projectpulse.com"
