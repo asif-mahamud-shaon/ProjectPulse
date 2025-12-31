@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, cubicBezier, type Variants } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../lib/api';
 import { 
@@ -61,7 +61,7 @@ interface ActivityItem {
   createdAt: string;
 }
 
-const containerVariants: Variants = {
+const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -71,19 +71,17 @@ const containerVariants: Variants = {
   }
 };
 
-
-const itemVariants: Variants = {
+const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
       duration: 0.4,
-      ease: cubicBezier(0, 0, 0.2, 1)
+      ease: "easeOut"
     }
   }
 };
-
 
 export default function AdminDashboard() {
   const { user } = useAuth();

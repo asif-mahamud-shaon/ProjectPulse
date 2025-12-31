@@ -47,4 +47,3 @@ module.exports = mongoose.model('CheckIn', checkInSchema);
 
 
 
-

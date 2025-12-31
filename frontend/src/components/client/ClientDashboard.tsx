@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, type Variants, cubicBezier } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../lib/api';
 import { MessageSquare, CheckCircle, AlertTriangle, Star, ArrowUpRight, Calendar, Heart, Flag } from 'lucide-react';
@@ -26,24 +26,27 @@ interface Feedback {
   createdAt: string;
 }
 
-const containerVariants: Variants = {
+const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.08 } }
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08
+    }
+  }
 };
 
-
-const itemVariants: Variants = {
+const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
       duration: 0.4,
-      ease: cubicBezier(0.33, 1, 0.68, 1)
+      ease: "easeOut"
     }
   }
 };
-
 
 export default function ClientDashboard() {
   const { user } = useAuth();

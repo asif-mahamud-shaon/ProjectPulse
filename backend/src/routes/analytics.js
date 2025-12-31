@@ -102,4 +102,3 @@ router.get('/', authenticate, authorize('ADMIN'), async (req, res) => {
 module.exports = router;
 
 
-

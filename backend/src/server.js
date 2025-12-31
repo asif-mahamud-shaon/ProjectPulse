@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://asif_mahamud_shaon:asif_mahamud_shaon200@cluster0.bdborqr.mongodb.net/ProjectPulse?appName=Cluster0';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://asif_mahamud_shaon:asif_mahamud_shaon200@cluster0.bdborqr.mongodb.net/projectpulse?appName=Cluster0';
 
 mongoose.connect(MONGODB_URI, {
   serverSelectionTimeoutMS: 5000,

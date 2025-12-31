@@ -123,4 +123,3 @@ router.get('/checkins', authenticate, authorize('ADMIN'), async (req, res) => {
 module.exports = router;
 
 
-
